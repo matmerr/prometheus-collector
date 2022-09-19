@@ -58,7 +58,7 @@
     "grafanaName": "[split(parameters('grafanaResourceId'),'/')[8]]",
     "dceName": "[Concat('MSProm', '-', parameters('azureMonitorWorkspaceLocation'), '-', variables('clusterName'))]",
     "dcrName": "[Concat('MSProm', '-', parameters('azureMonitorWorkspaceLocation'), '-', variables('clusterName'))]",
-    "dcraName": "[Concat('MSProm', '-', parameters('azureMonitorWorkspaceLocation'), '-', variables('clusterName'))]",
+    "dcraName": "[Concat('MSProm', '-', parameters('clusterLocation'), '-', variables('clusterName'))]",
     "nodeRecordingRuleGroup": "NodeRecordingRulesRuleGroup-",
     "nodeRecordingRuleGroupName": "[concat(variables('nodeRecordingRuleGroup'), variables('clusterName'))]",
     "nodeRecordingRuleGroupDescription": "Node Recording Rules RuleGroup",
@@ -135,6 +135,7 @@
               "type": "Microsoft.ContainerService/managedClusters/providers/dataCollectionRuleAssociations",
               "name": "[concat(variables('clusterName'),'/microsoft.insights/', variables('dcraName'))]",
               "apiVersion": "2021-09-01-preview",
+              "location": "[parameters('clusterLocation')]",
               "properties": {
                 "description": "Association of data collection rule. Deleting this association will break the data collection for this AKS Cluster.",
                 "dataCollectionRuleId": "[resourceId('Microsoft.Insights/dataCollectionRules', variables('dcrName'))]"
