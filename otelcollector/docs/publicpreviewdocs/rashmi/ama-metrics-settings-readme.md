@@ -22,7 +22,7 @@ If you wish to turn on the scraping of the default targets which are not enabled
 If you'd like to customize any of the default targets to filter out the metrics by their names you can edit the settings under 'default-targets-metrics-keep-list' in this [configmap](https://github.com/Azure/prometheus-collector/blob/main/otelcollector/configmaps/ama-metrics-settings-configmap.yaml) (or edit if you have already created it). 
 By default we ingest only minimal metrics as required by dashboards, rec.rules & alerts. 
 
-RashmiTBD: - Read about ingestion volume control & customizations [here](https://github.com/Azure/prometheus-collector/blob/temp/documentation/otelcollector/docs/publicpreviewdocs/vishwa/minimalingestionprofile.md)
+Read about ingestion volume control & customizations [here](https://github.com/Azure/prometheus-collector/blob/temp/documentation/otelcollector/docs/publicpreviewdocs/vishwa/minimalingestionprofile.md)
 
 This setting is per job, for example kubelet is the metric filtering setting for the default target - kubelet.
 Specify if you'd like to filter IN metrics collected for the default targets using regex based filtering. 
