@@ -50,4 +50,6 @@ If you wish to override the cluster label in the time-series scraped, you can up
 The new label will also show up in the grafana instance in the cluster dropdown instead of the default one.
 >Note - only alpha-numeric characters are allowed, everything else will be replaced with _ . This is to ensure that different components that consume this label (otel collector, telegraf etc..) will all adhere to the basic alphanumeric + _ convention.
 
-RashmiTBD: - Sync with Grace to doc
+## Debug mode 
+The addon agent can be configured to run in debug mode by updating the setting 'enabled' to true under the 'debug-mode' setting in this [configmap](https://github.com/Azure/prometheus-collector/blob/main/otelcollector/configmaps/ama-metrics-settings-configmap.yaml). You can either create this configmap or edit if you have already created one. 
+More information about debug mode [here](https://github.com/Azure/prometheus-collector/blob/temp/documentation/otelcollector/docs/publicpreviewdocs/soham/customerDebuggability3P.md#4-debug-mode)
