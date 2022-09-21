@@ -4,7 +4,7 @@
 
 The CPU and memory usage is correlated with the number of bytes of each sample and the number of samples scraped. Below are benchmarks based on the default targets scraped, volume of custom metrics scraped, and number of nodes, pods, and containers. These numbers are meant as a reference rather than a guarantee, since usage can still vary greatly depending on the number of timeseries and bytes per metric.
 
-Note that a very large volume of metrics per pod will require a large enough node to be able to handle the CPU and memory usage required. Below are guidelines on the expected usage. See [Rashmi's doc section] about how to specify a node that the replicaset should run on.
+Below are guidelines on the expected usage.
 
 Currently the upper volume limit per pod is around 3-3.5 million samples/min, depending on the number of bytes per sample. This limitation will go away in the future when sharding is added.
 
@@ -26,3 +26,14 @@ The agent consists of a deployment with one replica and daemonset for scraping m
   | default targets | 2.3 million | 14,400 | 340 | 13000 | 805 mc | 305.34 GB | 2.36 mc | 898 Mi |
 
   For additional custom metrics, the single pod will behave the same as the replicaset pod depending on the volume of custom metrics.
+
+
+### Schedule ama-metrics replicaset pod on a nodepool with more resources 
+
+Note that a very large volume of metrics per pod will require a large enough node to be able to handle the CPU and memory usage required. 
+If the ama-metrics replicaset pod doesn't get scheduled on a node that has enough resources, it might keep getting OOMKilled and go to CrashLoopBackoff.
+In order to overcome this, if you have a node on your cluster that has higher resources(preferably in the system nodepool) and want to get the replicaset scheduled on that node, you can add the label 'azuremonitor/metrics.replica.preferred=true' on the node and the replicaset pod will get scheduled on this node.  
+  ```
+  kubectl label nodes <node-name> azuremonitor/metrics.replica.preferred="true"
+  ```
+
