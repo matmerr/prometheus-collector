@@ -22,3 +22,5 @@ We have an alert template with hand-picked alerts from Prometheus community that
 16. KubeNodeUnreachable
 
 Current users of [Container Insights Log based recommended alerts](https://learn.microsoft.com/en-us/azure/azure-monitor/containers/container-insights-metric-alerts) can also try the equivalent Prometheus alerts in [this](https://github.com/Azure/prometheus-collector/blob/main/mixins/kubernetes/rules/recording_and_alerting_rules/templates/ci_recommended_alerts.json) ARM template .
+
+To know about deploying both the default recommended Prometheus alert rules and the recommended container insights log based alerts for Prometheus, follow [this](https://github.com/Azure/prometheus-collector/blob/temp/documentation/otelcollector/docs/publicpreviewdocs/soham/deployAlerts.md).
