@@ -1,0 +1,6 @@
+# Scrape interval settings 
+1. Using this feature, the customer can modify the scrape intervals of each target from the values-template.yaml file without having to touch the individual targets under default-prom-configs folder.  The scrape interval settings can be updated in the values-template file. 
+2. The values of the intervals has to be in the duration format, else the default value of 30s will be applied to the corresponding target. The regex for duration needs to be in the format specified by [here](https://prometheus.io/docs/prometheus/latest/configuration/configuration/#configuration-file). 
+3. For 3p scenario the values under default-targets-scrape-interval-settings in [this](https://github.com/Azure/prometheus-collector/blob/main/otelcollector/configmaps/ama-metrics-settings-configmap.yaml) file will be used to update the scrape interval in all the targets.
+4. There are a bunch of scenarios in which the config map might throw exceptions due to incorrect configurations. The errors related to the confimap issues can be traced [here](https://dataexplorer.azure.com/dashboards/2ed37a93-2d75-494c-a072-e34fe60dcdd6?p-_startTime=3hours&p-_endTime=now#c0ba5174-355a-4485-992a-ec53b1f67624).
+Our team also receives tickets in case of any such exceptions.
