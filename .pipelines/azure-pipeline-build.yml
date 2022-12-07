@@ -248,7 +248,7 @@ jobs:
         GdnBreakGdnToolSemmleSeverity: 'Warning'
 
 - job: Windows2019
-  displayName: "Build windows image"
+  displayName: "Build windows 2019 image"
   pool:
     name: Azure-Pipelines-Windows-CI-Test-EO
   dependsOn:
@@ -289,7 +289,7 @@ jobs:
         dockerImagesToScan: '$(WINDOWS_FULL_IMAGE_NAME)-$(WINDOWS_2019_BASE_IMAGE_VERSION)'
 
 - job: Windows2022
-  displayName: "Build windows image"
+  displayName: "Build windows 2022 image"
   pool:
     name: Azure-Pipelines-Windows-CI-Test-EO
   dependsOn:
@@ -325,7 +325,7 @@ jobs:
         alertWarningLevel: 'High'
 
 - job: WindowsMultiArch
-  displayName: "Build windows image"
+  displayName: "Build windows multi arch image"
   pool:
     name: Azure-Pipelines-Windows-CI-Test-EO
   dependsOn:
