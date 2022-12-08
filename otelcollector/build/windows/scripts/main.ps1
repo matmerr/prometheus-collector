@@ -51,15 +51,15 @@ function Set-EnvironmentVariablesAndConfigParser {
 
     [System.Environment]::SetEnvironmentVariable("MCS_GLOBAL_ENDPOINT", "https://global.handler.control.monitor.azure.com", "Process")
     [System.Environment]::SetEnvironmentVariable("MA_RoleEnvironment_Location", "eastus", "Process")
-    [System.Environment]::SetEnvironmentVariable("MA_RoleEnvironment_ResourceId", "/subscriptions/ce4d1293-71c0-4c72-bc55-133553ee9e50/resourceGroups/kaveesheternal/providers/Microsoft.ContainerService/managedClusters/kaveesheternal", "Process")
-    [System.Environment]::SetEnvironmentVariable("customResourceId", "/subscriptions/ce4d1293-71c0-4c72-bc55-133553ee9e50/resourceGroups/kaveesheternal/providers/Microsoft.ContainerService/managedClusters/kaveesheternal", "Process")
-    [System.Environment]::SetEnvironmentVariable("MCS_CUSTOM_RESOURCE_ID", "/subscriptions/ce4d1293-71c0-4c72-bc55-133553ee9e50/resourceGroups/kaveesheternal/providers/Microsoft.ContainerService/managedClusters/kaveesheternal", "Process")
+    [System.Environment]::SetEnvironmentVariable("MA_RoleEnvironment_ResourceId", "/subscriptions/ce4d1293-71c0-4c72-bc55-133553ee9e50/resourceGroups/sohamTestKV/providers/Microsoft.ContainerService/managedClusters/SohamWinCluster", "Process")
+    [System.Environment]::SetEnvironmentVariable("customResourceId", "/subscriptions/ce4d1293-71c0-4c72-bc55-133553ee9e50/resourceGroups/sohamTestKV/providers/Microsoft.ContainerService/managedClusters/SohamWinCluster", "Process")
+    [System.Environment]::SetEnvironmentVariable("MCS_CUSTOM_RESOURCE_ID", "/subscriptions/ce4d1293-71c0-4c72-bc55-133553ee9e50/resourceGroups/sohamTestKV/providers/Microsoft.ContainerService/managedClusters/SohamWinCluster", "Process")
     [System.Environment]::SetEnvironmentVariable("customRegion", "eastus", "Process")
     [System.Environment]::SetEnvironmentVariable("MCS_GLOBAL_ENDPOINT", "https://global.handler.control.monitor.azure.com", "Machine")
     [System.Environment]::SetEnvironmentVariable("MA_RoleEnvironment_Location", "eastus", "Machine")
-    [System.Environment]::SetEnvironmentVariable("MA_RoleEnvironment_ResourceId", "/subscriptions/ce4d1293-71c0-4c72-bc55-133553ee9e50/resourceGroups/kaveesheternal/providers/Microsoft.ContainerService/managedClusters/kaveesheternal", "Machine")
-    [System.Environment]::SetEnvironmentVariable("customResourceId", "/subscriptions/ce4d1293-71c0-4c72-bc55-133553ee9e50/resourceGroups/kaveesheternal/providers/Microsoft.ContainerService/managedClusters/kaveesheternal", "Machine")
-    [System.Environment]::SetEnvironmentVariable("MCS_CUSTOM_RESOURCE_ID", "/subscriptions/ce4d1293-71c0-4c72-bc55-133553ee9e50/resourceGroups/kaveesheternal/providers/Microsoft.ContainerService/managedClusters/kaveesheternal", "Machine")
+    [System.Environment]::SetEnvironmentVariable("MA_RoleEnvironment_ResourceId", "/subscriptions/ce4d1293-71c0-4c72-bc55-133553ee9e50/resourceGroups/sohamTestKV/providers/Microsoft.ContainerService/managedClusters/SohamWinCluster", "Machine")
+    [System.Environment]::SetEnvironmentVariable("customResourceId", "/subscriptions/ce4d1293-71c0-4c72-bc55-133553ee9e50/resourceGroups/sohamTestKV/providers/Microsoft.ContainerService/managedClusters/SohamWinCluster", "Machine")
+    [System.Environment]::SetEnvironmentVariable("MCS_CUSTOM_RESOURCE_ID", "/subscriptions/ce4d1293-71c0-4c72-bc55-133553ee9e50/resourceGroups/sohamTestKV/providers/Microsoft.ContainerService/managedClusters/SohamWinCluster", "Machine")
     [System.Environment]::SetEnvironmentVariable("customRegion", "eastus", "Machine")
     ############### Environment variables for MA {End} ###############
 
