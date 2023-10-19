@@ -269,7 +269,7 @@ intervalHash["WINDOWSEXPORTER_SCRAPE_INTERVAL"] = @windowsexporterScrapeInterval
 intervalHash["WINDOWSKUBEPROXY_SCRAPE_INTERVAL"] = @windowskubeproxyScrapeInterval
 intervalHash["PROMETHEUS_COLLECTOR_HEALTH_SCRAPE_INTERVAL"] = @prometheusCollectorHealthInterval
 intervalHash["POD_ANNOTATION_SCRAPE_INTERVAL"] = @podannotationScrapeInterval
-intervalHash["retinaBASIC_SCRAPE_INTERVAL"] = @retinabasicScrapeInterval
+intervalHash["RETINABASIC_SCRAPE_INTERVAL"] = @retinabasicScrapeInterval
 
 if !file.nil?
   # Close file after writing scrape interval list hash

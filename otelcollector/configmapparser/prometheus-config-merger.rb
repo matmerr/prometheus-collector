@@ -316,8 +316,8 @@ def populateDefaultPrometheusConfig
     end
 
     if !ENV["AZMON_PROMETHEUS_RETINABASIC_SCRAPING_ENABLED"].nil? && ENV["AZMON_PROMETHEUS_RETINABASIC_SCRAPING_ENABLED"].downcase == "true"
-      retinabasicMetricsKeepListRegex = @regexHash["retinaBASIC_METRICS_KEEP_LIST_REGEX"]
-      retinabasicScrapeInterval = @intervalHash["retinaBASIC_SCRAPE_INTERVAL"]
+      retinabasicMetricsKeepListRegex = @regexHash["RETINABASIC_METRICS_KEEP_LIST_REGEX"]
+      retinabasicScrapeInterval = @intervalHash["RETINABASIC_SCRAPE_INTERVAL"]
       if currentControllerType == @replicasetControllerType
         #do nothing -- retina is not supported to be scrapped automatically outside ds. if needed, customer can disable this ds target, and enable rs scraping thru custom config map
       else #retina scraping will be turned ON by default only when in MAC/addon mode (for both windows & linux)

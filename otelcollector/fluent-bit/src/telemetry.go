@@ -289,7 +289,7 @@ func InitializeTelemetryClient(agentVersion string) (int, error) {
 			WinExporterKeepListRegex = regexHash["WINDOWSEXPORTER_METRICS_KEEP_LIST_REGEX"]
 			WinKubeProxyKeepListRegex = regexHash["WINDOWSKUBEPROXY_METRICS_KEEP_LIST_REGEX"]
 			PodannotationKeepListRegex = regexHash["POD_ANNOTATION_METRICS_KEEP_LIST_REGEX"]
-			retinaBasicKeepListRegex = regexHash["retinaBASIC_METRICS_KEEP_LIST_REGEX"]
+			retinaBasicKeepListRegex = regexHash["RETINABASIC_METRICS_KEEP_LIST_REGEX"]
 		}
 	}
 
@@ -315,7 +315,7 @@ func InitializeTelemetryClient(agentVersion string) (int, error) {
 			WinKubeProxyScrapeInterval = intervalHash["WINDOWSKUBEPROXY_SCRAPE_INTERVAL"]
 			PromHealthScrapeInterval = intervalHash["PROMETHEUS_COLLECTOR_HEALTH_SCRAPE_INTERVAL"]
 			PodAnnotationScrapeInterval = intervalHash["POD_ANNOTATION_SCRAPE_INTERVAL"]
-			retinaBasicScrapeInterval = intervalHash["retinaBASIC_SCRAPE_INTERVAL"]
+			retinaBasicScrapeInterval = intervalHash["RETINABASIC_SCRAPE_INTERVAL"]
 		}
 	}
 

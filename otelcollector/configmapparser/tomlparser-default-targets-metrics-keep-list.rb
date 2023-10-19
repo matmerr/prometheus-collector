@@ -317,7 +317,7 @@ regexHash["NODEEXPORTER_METRICS_KEEP_LIST_REGEX"] = @nodeexporterRegex
 regexHash["WINDOWSEXPORTER_METRICS_KEEP_LIST_REGEX"] = @windowsexporterRegex
 regexHash["WINDOWSKUBEPROXY_METRICS_KEEP_LIST_REGEX"] = @windowskubeproxyRegex
 regexHash["POD_ANNOTATION_METRICS_KEEP_LIST_REGEX"] = @podannotationRegex
-regexHash["retinaBASIC_METRICS_KEEP_LIST_REGEX"] = @retinabasicRegex
+regexHash["RETINABASIC_METRICS_KEEP_LIST_REGEX"] = @retinabasicRegex
 
 if !file.nil?
   # Close file after writing regex keep list hash
